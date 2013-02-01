@@ -1,11 +1,11 @@
-# ----------------------- #
+﻿# ----------------------- #
 #      Main Configs       #
 # ----------------------- #
 
-url: http://yoursite.com
-title: My Octopress Blog
+url: http://qrshan.github.com
+title: 只缘身在此山中
 subtitle: A blogging framework for hackers.
-author: Your Name
+author: 卿荣山
 simple_search: http://google.com/search
 description:
 
