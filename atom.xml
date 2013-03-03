@@ -4,7 +4,7 @@
   <title><![CDATA[侠客谷]]></title>
   <link href="http://qrshan.github.com/atom.xml" rel="self"/>
   <link href="http://qrshan.github.com/"/>
-  <updated>2013-03-03T22:01:55+08:00</updated>
+  <updated>2013-03-03T22:07:53+08:00</updated>
   <id>http://qrshan.github.com/</id>
   <author>
     <name><![CDATA[卿荣山]]></name>
@@ -12,6 +12,15 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[octopress工作环境迁移测试]]></title>
+    <link href="http://qrshan.github.com/blog/2013/03/03/test111/"/>
+    <updated>2013-03-03T22:04:00+08:00</updated>
+    <id>http://qrshan.github.com/blog/2013/03/03/test111</id>
+    <content type="html"><![CDATA[<p>今天将octopress的工作环境从原来的笔记本电脑上门迁移至了我寝室的台式机上，测试一下o(≧v≦)o~~</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[论UCLA空切]]></title>
