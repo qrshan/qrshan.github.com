@@ -1,8 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
 
-  <title><![CDATA[侠客谷]]></title>
-  <link href="http://qrshan.github.com/atom.xml" rel="self"/>
+  <title><![CDATA[Category: 龙门阵 | 侠客谷]]></title>
+  <link href="http://qrshan.github.com/blog/categories/龙门阵/atom.xml" rel="self"/>
   <link href="http://qrshan.github.com/"/>
   <updated>2013-03-04T15:23:54+08:00</updated>
   <id>http://qrshan.github.com/</id>
@@ -12,15 +12,6 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
-  
-  <entry>
-    <title type="html"><![CDATA[octopress工作环境迁移测试]]></title>
-    <link href="http://qrshan.github.com/blog/2013/03/03/test111/"/>
-    <updated>2013-03-03T22:04:00+08:00</updated>
-    <id>http://qrshan.github.com/blog/2013/03/03/test111</id>
-    <content type="html"><![CDATA[<p>今天将octopress的工作环境从原来的笔记本电脑上门迁移至了我寝室的台式机上，测试一下o(≧v≦)o~~</p>
-]]></content>
-  </entry>
   
   <entry>
     <title type="html"><![CDATA[论UCLA空切]]></title>
@@ -46,23 +37,6 @@ UCLA空切，初始采用2-3落位。1持球过半场，佯装寻找4，随后�
 这便是UCLA空切之后的基本演化定式，此外还有数般变化，皆在此基础上演进，变化无穷。比如，德隆·威廉姆斯将球打到3号位，利用奥库（5号位）的掩护向下空切，如果防守提前绕过掩护，他也曾经在奥库身边突然停步，后撤步接3号位传球三分跳投；拥有出色背身单打能力的2号位，比如科比，利用拜纳姆的掩护向下切，无论是否摆脱防守，对方防守空间都已拉开，给科比创造了在低位背身单打的机会。一招UCLA空切，在不断移动中不断创造机会，场上的五个人手上都有机会出现，防不胜防。这套打法起势，最大程度展现了五人参与的集体进攻。<br/>
 这两天，我看到一些球迷在悼念伍登教练的时候说“你的挡拆战术不朽”。看了上面的介绍，你就会知道，其实这是一种误读。因为爵士队打UCLA进攻，同时爵士20年来又以马龙-斯托克顿，德隆-布泽尔的挡拆闻名，让一些球迷误以为，伍登教练的UCLA进攻主打挡拆。事实上，伍登教练的UCLA进攻很少打挡拆，也并不鼓励由两个人掌控球队的进攻，而是要求五个人都有机会。爵士擅打挡拆，是老斯隆根据马龙-斯托克顿的个人特点和默契，用两人挡拆丰富UCLA进攻的手段，而不是伍登教练的本意。<br/>
 对于伍登教练而言，球永远是场上五个人打的，是全队12个人打的。超级明星们可能对此不以为然，但谁也改变不了，伍登教练的泰斗之位。</p>
-]]></content>
-  </entry>
-  
-  <entry>
-    <title type="html"><![CDATA[octopress 初体验]]></title>
-    <link href="http://qrshan.github.com/blog/2013/02/02/octopress-hello-world/"/>
-    <updated>2013-02-02T12:14:00+08:00</updated>
-    <id>http://qrshan.github.com/blog/2013/02/02/octopress-hello-world</id>
-    <content type="html"><![CDATA[<p><em>hello world</em>!<strong>octopress</strong>!你好！ <br/>
-今天一早都受困于octopress无法插入中文，试了修改环境变量：<br/>
-LC_ALL=zh_CN.UTF-8<br/>
-LANG=zh_CN.UTF-8<br/>
-均不成功，后来经过考证发现如下几个问题才得以成功插入中文：<br/>
-<em>1、markdown文件如果出现了中文请另存为<strong>UTF-8格式且去掉BOM头</strong>。<br/>
-2、yaml的冒号后要有<strong>空格</strong>。<br/>
-3、把设置环境变量里的zh_CN改成<strong>en_US</strong></em><br/>
-如此设置，中文乱码问题就解决了。</p>
 ]]></content>
   </entry>
   
