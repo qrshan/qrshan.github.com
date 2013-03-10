@@ -4,7 +4,7 @@
   <title><![CDATA[Category: 复习笔记 | 侠客谷]]></title>
   <link href="http://qrshan.github.com/blog/categories/复习笔记/atom.xml" rel="self"/>
   <link href="http://qrshan.github.com/"/>
-  <updated>2013-03-10T15:00:37+08:00</updated>
+  <updated>2013-03-10T15:06:23+08:00</updated>
   <id>http://qrshan.github.com/</id>
   <author>
     <name><![CDATA[卿荣山]]></name>
@@ -26,7 +26,8 @@
 
 <p>Iterator:</p>
 
-<pre><code>''' java  
+<pre><code>``` java zz:体系结构期末复习——设计模式思考题 http://qrshan.github.com/blog/2013/03/10/code/ Source Article
+
 import java.util.*;
 
 public class Iter {
@@ -130,12 +131,12 @@ class DataList&lt;T, V, W&gt; implements Aggregate&lt;T, V, W&gt; {
   public Iterator&lt;V&gt; createIteratorB() { return ib; }  
   public Iterator&lt;W&gt; createIteratorC() { return ic; }  
 }
-'''
+```
 </code></pre>
 
 <p>Proxy:</p>
 
-<pre><code>''' java  
+<pre><code>``` java zz:体系结构期末复习——设计模式思考题 http://qrshan.github.com/blog/2013/03/10/code/ Source Article      
 import java.util.*;
 
 public class Proxy {
@@ -203,7 +204,7 @@ class DataList&lt;T, V, W&gt; implements IDataList&lt;T, V, W&gt; {
   public V getB(int i) { return list.get(i).getB(); }
   public W getC(int i) { return list.get(i).getC(); }
 }
-'''
+```
 </code></pre>
 
 <p>Decorator, OCP<br/>
