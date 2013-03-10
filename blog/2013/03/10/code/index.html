@@ -101,186 +101,361 @@
 
 <p>Iterator:</p>
 
-<pre><code>``` java
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+<span class='line-number'>50</span>
+<span class='line-number'>51</span>
+<span class='line-number'>52</span>
+<span class='line-number'>53</span>
+<span class='line-number'>54</span>
+<span class='line-number'>55</span>
+<span class='line-number'>56</span>
+<span class='line-number'>57</span>
+<span class='line-number'>58</span>
+<span class='line-number'>59</span>
+<span class='line-number'>60</span>
+<span class='line-number'>61</span>
+<span class='line-number'>62</span>
+<span class='line-number'>63</span>
+<span class='line-number'>64</span>
+<span class='line-number'>65</span>
+<span class='line-number'>66</span>
+<span class='line-number'>67</span>
+<span class='line-number'>68</span>
+<span class='line-number'>69</span>
+<span class='line-number'>70</span>
+<span class='line-number'>71</span>
+<span class='line-number'>72</span>
+<span class='line-number'>73</span>
+<span class='line-number'>74</span>
+<span class='line-number'>75</span>
+<span class='line-number'>76</span>
+<span class='line-number'>77</span>
+<span class='line-number'>78</span>
+<span class='line-number'>79</span>
+<span class='line-number'>80</span>
+<span class='line-number'>81</span>
+<span class='line-number'>82</span>
+<span class='line-number'>83</span>
+<span class='line-number'>84</span>
+<span class='line-number'>85</span>
+<span class='line-number'>86</span>
+<span class='line-number'>87</span>
+<span class='line-number'>88</span>
+<span class='line-number'>89</span>
+<span class='line-number'>90</span>
+<span class='line-number'>91</span>
+<span class='line-number'>92</span>
+<span class='line-number'>93</span>
+<span class='line-number'>94</span>
+<span class='line-number'>95</span>
+<span class='line-number'>96</span>
+<span class='line-number'>97</span>
+<span class='line-number'>98</span>
+<span class='line-number'>99</span>
+<span class='line-number'>100</span>
+<span class='line-number'>101</span>
+<span class='line-number'>102</span>
+<span class='line-number'>103</span>
+<span class='line-number'>104</span>
+<span class='line-number'>105</span>
+</pre></td><td class='code'><pre><code class='java'><span class='line'>
+</span><span class='line'>  <span class="kn">import</span> <span class="nn">java.util.*</span><span class="o">;</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="kd">public</span> <span class="kd">class</span> <span class="nc">Iter</span> <span class="o">{</span>
+</span><span class='line'>          <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+</span><span class='line'>          <span class="n">Aggregate</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">,</span> <span class="n">Integer</span><span class="o">,</span> <span class="n">Integer</span><span class="o">&gt;</span> <span class="n">ag</span> <span class="o">=</span> <span class="k">new</span> <span class="n">DataList</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">,</span> <span class="n">Integer</span><span class="o">,</span> <span class="n">Integer</span><span class="o">&gt;();</span>
+</span><span class='line'>          <span class="o">((</span><span class="n">DataList</span><span class="o">)</span><span class="n">ag</span><span class="o">).</span><span class="na">add</span><span class="o">(</span><span class="k">new</span> <span class="n">ThreeD</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">,</span> <span class="n">Integer</span><span class="o">,</span> <span class="n">Integer</span><span class="o">&gt;(</span><span class="mi">1</span><span class="o">,</span> <span class="mi">2</span><span class="o">,</span> <span class="mi">3</span><span class="o">));</span>
+</span><span class='line'>          <span class="o">((</span><span class="n">DataList</span><span class="o">)</span><span class="n">ag</span><span class="o">).</span><span class="na">add</span><span class="o">(</span><span class="k">new</span> <span class="n">ThreeD</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">,</span> <span class="n">Integer</span><span class="o">,</span> <span class="n">Integer</span><span class="o">&gt;(</span><span class="mi">1</span><span class="o">,</span> <span class="mi">2</span><span class="o">,</span> <span class="mi">3</span><span class="o">));</span>
+</span><span class='line'>          <span class="o">((</span><span class="n">DataList</span><span class="o">)</span><span class="n">ag</span><span class="o">).</span><span class="na">add</span><span class="o">(</span><span class="k">new</span> <span class="n">ThreeD</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">,</span> <span class="n">Integer</span><span class="o">,</span> <span class="n">Integer</span><span class="o">&gt;(</span><span class="mi">1</span><span class="o">,</span> <span class="mi">2</span><span class="o">,</span> <span class="mi">3</span><span class="o">));</span>
+</span><span class='line'>          <span class="n">Iterator</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="n">ia</span> <span class="o">=</span> <span class="n">ag</span><span class="o">.</span><span class="na">createIteratorA</span><span class="o">();</span>
+</span><span class='line'>          <span class="k">while</span> <span class="o">(</span><span class="n">ia</span><span class="o">.</span><span class="na">next</span><span class="o">()</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
+</span><span class='line'>              <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">ia</span><span class="o">.</span><span class="na">currentItem</span><span class="o">());</span>
+</span><span class='line'>          <span class="o">}</span>
+</span><span class='line'>          <span class="n">Iterator</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="n">ib</span> <span class="o">=</span> <span class="n">ag</span><span class="o">.</span><span class="na">createIteratorB</span><span class="o">();</span>
+</span><span class='line'>          <span class="k">while</span> <span class="o">(</span><span class="n">ib</span><span class="o">.</span><span class="na">next</span><span class="o">()</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
+</span><span class='line'>              <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">ib</span><span class="o">.</span><span class="na">currentItem</span><span class="o">());</span>
+</span><span class='line'>          <span class="o">}</span>
+</span><span class='line'>          <span class="n">Iterator</span><span class="o">&lt;</span><span class="n">Integer</span><span class="o">&gt;</span> <span class="n">ic</span> <span class="o">=</span> <span class="n">ag</span><span class="o">.</span><span class="na">createIteratorC</span><span class="o">();</span>
+</span><span class='line'>          <span class="k">while</span> <span class="o">(</span><span class="n">ic</span><span class="o">.</span><span class="na">next</span><span class="o">()</span> <span class="o">!=</span> <span class="kc">null</span><span class="o">)</span> <span class="o">{</span>
+</span><span class='line'>              <span class="n">System</span><span class="o">.</span><span class="na">out</span><span class="o">.</span><span class="na">println</span><span class="o">(</span><span class="n">ic</span><span class="o">.</span><span class="na">currentItem</span><span class="o">());</span>
+</span><span class='line'>          <span class="o">}</span>
+</span><span class='line'>      <span class="o">}</span>
+</span><span class='line'>  <span class="o">}</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="kd">class</span> <span class="nc">ThreeD</span><span class="o">&lt;</span><span class="n">T</span><span class="o">,</span> <span class="n">V</span><span class="o">,</span> <span class="n">W</span><span class="o">&gt;</span> <span class="o">{</span>
+</span><span class='line'>  
+</span><span class='line'>    <span class="kd">private</span> <span class="n">T</span> <span class="n">t</span><span class="o">;</span>
+</span><span class='line'>    <span class="kd">private</span> <span class="n">V</span> <span class="n">v</span><span class="o">;</span>
+</span><span class='line'>    <span class="kd">private</span> <span class="n">W</span> <span class="n">w</span><span class="o">;</span>
+</span><span class='line'>  
+</span><span class='line'>    <span class="kd">public</span> <span class="nf">ThreeD</span><span class="o">(</span><span class="n">T</span> <span class="n">t</span><span class="o">,</span> <span class="n">V</span> <span class="n">v</span><span class="o">,</span> <span class="n">W</span> <span class="n">w</span><span class="o">)</span> <span class="o">{</span>
+</span><span class='line'>  <span class="k">this</span><span class="o">.</span><span class="na">t</span> <span class="o">=</span> <span class="n">t</span><span class="o">;</span>
+</span><span class='line'>  <span class="k">this</span><span class="o">.</span><span class="na">v</span> <span class="o">=</span> <span class="n">v</span><span class="o">;</span>
+</span><span class='line'>  <span class="k">this</span><span class="o">.</span><span class="na">w</span> <span class="o">=</span> <span class="n">w</span><span class="o">;</span>
+</span><span class='line'>    <span class="o">}</span>
+</span><span class='line'>  
+</span><span class='line'>    <span class="kd">public</span> <span class="n">T</span> <span class="nf">getA</span><span class="o">()</span> <span class="o">{</span> <span class="k">return</span> <span class="n">t</span><span class="o">;}</span>
+</span><span class='line'>    <span class="kd">public</span> <span class="n">V</span> <span class="nf">getB</span><span class="o">()</span> <span class="o">{</span> <span class="k">return</span> <span class="n">v</span><span class="o">;}</span>
+</span><span class='line'>    <span class="kd">public</span> <span class="n">W</span> <span class="nf">getC</span><span class="o">()</span> <span class="o">{</span> <span class="k">return</span> <span class="n">w</span><span class="o">;}</span>
+</span><span class='line'>  <span class="o">}</span>
+</span><span class='line'>  
+</span><span class='line'>  <span class="kd">interface</span> <span class="nc">Aggregate</span><span class="o">&lt;</span><span class="n">T</span><span class="o">,</span> <span class="n">V</span><span class="o">,</span> <span class="n">W</span><span class="o">&gt;</span> <span class="o">{</span>
+</span><span class='line'>    <span class="kd">public</span> <span class="n">Iterator</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="nf">createIteratorA</span><span class="o">();</span>
+</span><span class='line'>    <span class="kd">public</span> <span class="n">Iterator</span><span class="o">&lt;</span><span class="n">V</span><span class="o">&gt;</span> <span class="nf">createIteratorB</span><span class="o">();</span>
+</span><span class='line'>    <span class="kd">public</span> <span class="n">Iterator</span><span class="o">&lt;</span><span class="n">W</span><span class="o">&gt;</span> <span class="nf">createIteratorC</span><span class="o">();</span>
+</span><span class='line'>  <span class="o">}</span>
+</span><span class='line'>  
+</span><span class='line'>  <span class="kd">interface</span> <span class="nc">Iterator</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="o">{</span>
+</span><span class='line'>    <span class="kd">public</span> <span class="n">T</span> <span class="nf">first</span><span class="o">();</span>
+</span><span class='line'>    <span class="kd">public</span> <span class="n">T</span> <span class="nf">next</span><span class="o">();</span>
+</span><span class='line'>    <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">isDone</span><span class="o">();</span>
+</span><span class='line'>    <span class="kd">public</span> <span class="n">T</span> <span class="nf">currentItem</span><span class="o">();</span>
+</span><span class='line'>  <span class="o">}</span>
+</span><span class='line'>  
+</span><span class='line'>  <span class="kd">abstract</span> <span class="kd">class</span> <span class="nc">IteratorABC</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="kd">implements</span> <span class="n">Iterator</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;{</span>
+</span><span class='line'>    <span class="kd">protected</span> <span class="n">DataList</span> <span class="n">ag</span><span class="o">;</span>
+</span><span class='line'>    <span class="kd">protected</span> <span class="kt">int</span> <span class="n">i</span><span class="o">;</span>
+</span><span class='line'>    <span class="kd">public</span> <span class="nf">IteratorABC</span><span class="o">(</span><span class="n">DataList</span> <span class="n">ag</span><span class="o">)</span> <span class="o">{</span>
+</span><span class='line'>  <span class="k">this</span><span class="o">.</span><span class="na">ag</span> <span class="o">=</span> <span class="n">ag</span><span class="o">;</span>
+</span><span class='line'>  <span class="n">i</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="o">;</span>
+</span><span class='line'>    <span class="o">}</span>
+</span><span class='line'>    <span class="kd">public</span> <span class="n">T</span> <span class="nf">first</span><span class="o">()</span> <span class="o">{</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="k">return</span> <span class="n">currentItem</span><span class="o">();}</span>
+</span><span class='line'>    <span class="kd">public</span> <span class="n">T</span> <span class="nf">next</span><span class="o">()</span> <span class="o">{</span><span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span><span class="o">;</span> <span class="k">return</span> <span class="n">currentItem</span><span class="o">();}</span>
+</span><span class='line'>    <span class="kd">public</span> <span class="kt">boolean</span> <span class="nf">isDone</span><span class="o">()</span> <span class="o">{</span><span class="k">return</span> <span class="n">i</span> <span class="o">&gt;=</span> <span class="n">ag</span><span class="o">.</span><span class="na">size</span><span class="o">()</span> <span class="o">;}</span>
+</span><span class='line'>    <span class="kd">public</span> <span class="kd">abstract</span> <span class="n">T</span> <span class="nf">currentItem</span><span class="o">();</span>
+</span><span class='line'>  <span class="o">}</span>
+</span><span class='line'>  
+</span><span class='line'>  
+</span><span class='line'>  <span class="kd">class</span> <span class="nc">IteratorA</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="kd">extends</span> <span class="n">IteratorABC</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;{</span>
+</span><span class='line'>    <span class="kd">public</span> <span class="nf">IteratorA</span><span class="o">(</span><span class="n">DataList</span> <span class="n">ag</span><span class="o">)</span> <span class="o">{</span>
+</span><span class='line'>  <span class="kd">super</span><span class="o">(</span><span class="n">ag</span><span class="o">);</span>
+</span><span class='line'>    <span class="o">}</span>
+</span><span class='line'>    <span class="kd">public</span> <span class="n">T</span> <span class="nf">currentItem</span><span class="o">()</span> <span class="o">{</span> <span class="k">if</span> <span class="o">(</span><span class="n">isDone</span><span class="o">())</span> <span class="k">return</span> <span class="kc">null</span><span class="o">;</span> <span class="k">return</span> <span class="o">(</span><span class="n">T</span><span class="o">)</span><span class="n">ag</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">i</span><span class="o">).</span><span class="na">getA</span><span class="o">();}</span>
+</span><span class='line'>  <span class="o">}</span>
+</span><span class='line'>  
+</span><span class='line'>  <span class="kd">class</span> <span class="nc">IteratorB</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="kd">extends</span> <span class="n">IteratorABC</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;{</span>
+</span><span class='line'>    <span class="kd">public</span> <span class="nf">IteratorB</span><span class="o">(</span><span class="n">DataList</span> <span class="n">ag</span><span class="o">)</span> <span class="o">{</span>
+</span><span class='line'>  <span class="kd">super</span><span class="o">(</span><span class="n">ag</span><span class="o">);</span>
+</span><span class='line'>    <span class="o">}</span>
+</span><span class='line'>    <span class="kd">public</span> <span class="n">T</span> <span class="nf">currentItem</span><span class="o">()</span> <span class="o">{</span> <span class="k">if</span> <span class="o">(</span><span class="n">isDone</span><span class="o">())</span> <span class="k">return</span> <span class="kc">null</span><span class="o">;</span> <span class="k">return</span> <span class="o">(</span><span class="n">T</span><span class="o">)</span><span class="n">ag</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">i</span><span class="o">).</span><span class="na">getB</span><span class="o">();}</span>
+</span><span class='line'>  <span class="o">}</span>
+</span><span class='line'>  
+</span><span class='line'>  <span class="kd">class</span> <span class="nc">IteratorC</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="kd">extends</span> <span class="n">IteratorABC</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;{</span>
+</span><span class='line'>    <span class="kd">public</span> <span class="nf">IteratorC</span><span class="o">(</span><span class="n">DataList</span> <span class="n">ag</span><span class="o">)</span> <span class="o">{</span>
+</span><span class='line'>  <span class="kd">super</span><span class="o">(</span><span class="n">ag</span><span class="o">);</span>
+</span><span class='line'>    <span class="o">}</span>
+</span><span class='line'>    <span class="kd">public</span> <span class="n">T</span> <span class="nf">currentItem</span><span class="o">()</span> <span class="o">{</span> <span class="k">if</span> <span class="o">(</span><span class="n">isDone</span><span class="o">())</span> <span class="k">return</span> <span class="kc">null</span><span class="o">;</span> <span class="k">return</span> <span class="o">(</span><span class="n">T</span><span class="o">)</span><span class="n">ag</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">i</span><span class="o">).</span><span class="na">getC</span><span class="o">();}</span>
+</span><span class='line'>  <span class="o">}</span>
+</span><span class='line'>  
+</span><span class='line'>  <span class="kd">class</span> <span class="nc">DataList</span><span class="o">&lt;</span><span class="n">T</span><span class="o">,</span> <span class="n">V</span><span class="o">,</span> <span class="n">W</span><span class="o">&gt;</span> <span class="kd">implements</span> <span class="n">Aggregate</span><span class="o">&lt;</span><span class="n">T</span><span class="o">,</span> <span class="n">V</span><span class="o">,</span> <span class="n">W</span><span class="o">&gt;</span> <span class="o">{</span>
+</span><span class='line'>  
+</span><span class='line'>    <span class="kd">private</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">ThreeD</span><span class="o">&lt;</span><span class="n">T</span><span class="o">,</span> <span class="n">V</span><span class="o">,</span> <span class="n">W</span><span class="o">&gt;&gt;</span> <span class="n">list</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">ThreeD</span><span class="o">&lt;</span><span class="n">T</span><span class="o">,</span> <span class="n">V</span><span class="o">,</span> <span class="n">W</span><span class="o">&gt;&gt;();</span>
+</span><span class='line'>    <span class="kd">private</span> <span class="n">IteratorA</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="n">ia</span> <span class="o">=</span> <span class="k">new</span> <span class="n">IteratorA</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;(</span><span class="k">this</span><span class="o">);</span>
+</span><span class='line'>    <span class="kd">private</span> <span class="n">IteratorB</span><span class="o">&lt;</span><span class="n">V</span><span class="o">&gt;</span> <span class="n">ib</span> <span class="o">=</span> <span class="k">new</span> <span class="n">IteratorB</span><span class="o">&lt;</span><span class="n">V</span><span class="o">&gt;(</span><span class="k">this</span><span class="o">);</span>
+</span><span class='line'>    <span class="kd">private</span> <span class="n">IteratorC</span><span class="o">&lt;</span><span class="n">W</span><span class="o">&gt;</span> <span class="n">ic</span> <span class="o">=</span> <span class="k">new</span> <span class="n">IteratorC</span><span class="o">&lt;</span><span class="n">W</span><span class="o">&gt;(</span><span class="k">this</span><span class="o">);</span>
+</span><span class='line'>  
+</span><span class='line'>    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">add</span><span class="o">(</span><span class="n">ThreeD</span><span class="o">&lt;</span><span class="n">T</span><span class="o">,</span> <span class="n">V</span><span class="o">,</span> <span class="n">W</span><span class="o">&gt;</span> <span class="n">d</span><span class="o">)</span> <span class="o">{</span> <span class="n">list</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">d</span><span class="o">);</span> <span class="o">}</span>
+</span><span class='line'>    <span class="kd">public</span> <span class="n">ThreeD</span><span class="o">&lt;</span><span class="n">T</span><span class="o">,</span> <span class="n">V</span><span class="o">,</span> <span class="n">W</span><span class="o">&gt;</span> <span class="n">get</span><span class="o">(</span><span class="kt">int</span> <span class="n">index</span><span class="o">)</span> <span class="o">{</span> <span class="k">return</span> <span class="n">list</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">index</span><span class="o">);</span> <span class="o">}</span>
+</span><span class='line'>    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">size</span><span class="o">()</span> <span class="o">{</span><span class="k">return</span> <span class="n">list</span><span class="o">.</span><span class="na">size</span><span class="o">();}</span>
+</span><span class='line'>  
+</span><span class='line'>    <span class="kd">public</span> <span class="n">Iterator</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="nf">createIteratorA</span><span class="o">()</span> <span class="o">{</span> <span class="k">return</span> <span class="n">ia</span><span class="o">;</span> <span class="o">}</span>
+</span><span class='line'>    <span class="kd">public</span> <span class="n">Iterator</span><span class="o">&lt;</span><span class="n">V</span><span class="o">&gt;</span> <span class="nf">createIteratorB</span><span class="o">()</span> <span class="o">{</span> <span class="k">return</span> <span class="n">ib</span><span class="o">;</span> <span class="o">}</span>
+</span><span class='line'>    <span class="kd">public</span> <span class="n">Iterator</span><span class="o">&lt;</span><span class="n">W</span><span class="o">&gt;</span> <span class="nf">createIteratorC</span><span class="o">()</span> <span class="o">{</span> <span class="k">return</span> <span class="n">ic</span><span class="o">;</span> <span class="o">}</span>
+</span><span class='line'>  <span class="o">}</span>
+</span><span class='line'>  
+</span></code></pre></td></tr></table></div></figure>
 
-import java.util.*;
-
-public class Iter {
-    public static void main(String[] args) {
-        Aggregate&lt;Integer, Integer, Integer&gt; ag = new DataList&lt;Integer, Integer, Integer&gt;();
-        ((DataList)ag).add(new ThreeD&lt;Integer, Integer, Integer&gt;(1, 2, 3));
-        ((DataList)ag).add(new ThreeD&lt;Integer, Integer, Integer&gt;(1, 2, 3));
-        ((DataList)ag).add(new ThreeD&lt;Integer, Integer, Integer&gt;(1, 2, 3));
-        Iterator&lt;Integer&gt; ia = ag.createIteratorA();
-        while (ia.next() != null) {
-            System.out.println(ia.currentItem());
-        }
-        Iterator&lt;Integer&gt; ib = ag.createIteratorB();
-        while (ib.next() != null) {
-            System.out.println(ib.currentItem());
-        }
-        Iterator&lt;Integer&gt; ic = ag.createIteratorC();
-        while (ic.next() != null) {
-            System.out.println(ic.currentItem());
-        }
-    }
-}
-
-class ThreeD&lt;T, V, W&gt; {
-
-  private T t;
-  private V v;
-  private W w;
-
-  public ThreeD(T t, V v, W w) {
-this.t = t;
-this.v = v;
-this.w = w;
-  }
-
-  public T getA() { return t;}
-  public V getB() { return v;}
-  public W getC() { return w;}
-}
-
-interface Aggregate&lt;T, V, W&gt; {
-  public Iterator&lt;T&gt; createIteratorA();
-  public Iterator&lt;V&gt; createIteratorB();
-  public Iterator&lt;W&gt; createIteratorC();
-}
-
-interface Iterator&lt;T&gt; {
-  public T first();
-  public T next();
-  public boolean isDone();
-  public T currentItem();
-}
-
-abstract class IteratorABC&lt;T&gt; implements Iterator&lt;T&gt;{
-  protected DataList ag;
-  protected int i;
-  public IteratorABC(DataList ag) {
-this.ag = ag;
-i = -1;
-  }
-  public T first() { i = 0; return currentItem();}
-  public T next() {i += 1; return currentItem();}
-  public boolean isDone() {return i &gt;= ag.size() ;}
-  public abstract T currentItem();
-}
-
-
-class IteratorA&lt;T&gt; extends IteratorABC&lt;T&gt;{
-  public IteratorA(DataList ag) {
-super(ag);
-  }
-  public T currentItem() { if (isDone()) return null; return (T)ag.get(i).getA();}
-}
-
-class IteratorB&lt;T&gt; extends IteratorABC&lt;T&gt;{
-  public IteratorB(DataList ag) {
-super(ag);
-  }
-  public T currentItem() { if (isDone()) return null; return (T)ag.get(i).getB();}
-}
-
-class IteratorC&lt;T&gt; extends IteratorABC&lt;T&gt;{
-  public IteratorC(DataList ag) {
-super(ag);
-  }
-  public T currentItem() { if (isDone()) return null; return (T)ag.get(i).getC();}
-}
-
-class DataList&lt;T, V, W&gt; implements Aggregate&lt;T, V, W&gt; {
-
-  private ArrayList&lt;ThreeD&lt;T, V, W&gt;&gt; list = new ArrayList&lt;ThreeD&lt;T, V, W&gt;&gt;();
-  private IteratorA&lt;T&gt; ia = new IteratorA&lt;T&gt;(this);
-  private IteratorB&lt;V&gt; ib = new IteratorB&lt;V&gt;(this);
-  private IteratorC&lt;W&gt; ic = new IteratorC&lt;W&gt;(this);
-
-  public void add(ThreeD&lt;T, V, W&gt; d) { list.add(d); }  
-  public ThreeD&lt;T, V, W&gt; get(int index) { return list.get(index); }  
-  public int size() {return list.size();}  
-
-  public Iterator&lt;T&gt; createIteratorA() { return ia; }  
-  public Iterator&lt;V&gt; createIteratorB() { return ib; }  
-  public Iterator&lt;W&gt; createIteratorC() { return ic; }  
-}
-```
-</code></pre>
 
 <p>Proxy:</p>
 
-<pre><code>``` java       
-import java.util.*;
+<figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
+<span class='line-number'>2</span>
+<span class='line-number'>3</span>
+<span class='line-number'>4</span>
+<span class='line-number'>5</span>
+<span class='line-number'>6</span>
+<span class='line-number'>7</span>
+<span class='line-number'>8</span>
+<span class='line-number'>9</span>
+<span class='line-number'>10</span>
+<span class='line-number'>11</span>
+<span class='line-number'>12</span>
+<span class='line-number'>13</span>
+<span class='line-number'>14</span>
+<span class='line-number'>15</span>
+<span class='line-number'>16</span>
+<span class='line-number'>17</span>
+<span class='line-number'>18</span>
+<span class='line-number'>19</span>
+<span class='line-number'>20</span>
+<span class='line-number'>21</span>
+<span class='line-number'>22</span>
+<span class='line-number'>23</span>
+<span class='line-number'>24</span>
+<span class='line-number'>25</span>
+<span class='line-number'>26</span>
+<span class='line-number'>27</span>
+<span class='line-number'>28</span>
+<span class='line-number'>29</span>
+<span class='line-number'>30</span>
+<span class='line-number'>31</span>
+<span class='line-number'>32</span>
+<span class='line-number'>33</span>
+<span class='line-number'>34</span>
+<span class='line-number'>35</span>
+<span class='line-number'>36</span>
+<span class='line-number'>37</span>
+<span class='line-number'>38</span>
+<span class='line-number'>39</span>
+<span class='line-number'>40</span>
+<span class='line-number'>41</span>
+<span class='line-number'>42</span>
+<span class='line-number'>43</span>
+<span class='line-number'>44</span>
+<span class='line-number'>45</span>
+<span class='line-number'>46</span>
+<span class='line-number'>47</span>
+<span class='line-number'>48</span>
+<span class='line-number'>49</span>
+<span class='line-number'>50</span>
+<span class='line-number'>51</span>
+<span class='line-number'>52</span>
+<span class='line-number'>53</span>
+<span class='line-number'>54</span>
+<span class='line-number'>55</span>
+<span class='line-number'>56</span>
+<span class='line-number'>57</span>
+<span class='line-number'>58</span>
+<span class='line-number'>59</span>
+<span class='line-number'>60</span>
+<span class='line-number'>61</span>
+<span class='line-number'>62</span>
+<span class='line-number'>63</span>
+<span class='line-number'>64</span>
+<span class='line-number'>65</span>
+<span class='line-number'>66</span>
+<span class='line-number'>67</span>
+<span class='line-number'>68</span>
+<span class='line-number'>69</span>
+</pre></td><td class='code'><pre><code class='java'><span class='line'>
+</span><span class='line'>    <span class="kn">import</span> <span class="nn">java.util.*</span><span class="o">;</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="kd">public</span> <span class="kd">class</span> <span class="nc">Proxy</span> <span class="o">{</span>
+</span><span class='line'>    <span class="kd">public</span> <span class="kd">static</span> <span class="kt">void</span> <span class="nf">main</span><span class="o">(</span><span class="n">String</span><span class="o">[]</span> <span class="n">args</span><span class="o">)</span> <span class="o">{</span>
+</span><span class='line'>    <span class="o">}</span>
+</span><span class='line'>  <span class="o">}</span>
+</span><span class='line'>
+</span><span class='line'>  <span class="kd">class</span> <span class="nc">ThreeD</span><span class="o">&lt;</span><span class="n">T</span><span class="o">,</span> <span class="n">V</span><span class="o">,</span> <span class="n">W</span><span class="o">&gt;</span> <span class="o">{</span>
+</span><span class='line'>  
+</span><span class='line'>    <span class="kd">private</span> <span class="n">T</span> <span class="n">t</span><span class="o">;</span>
+</span><span class='line'>    <span class="kd">private</span> <span class="n">V</span> <span class="n">v</span><span class="o">;</span>
+</span><span class='line'>    <span class="kd">private</span> <span class="n">W</span> <span class="n">w</span><span class="o">;</span>
+</span><span class='line'>  
+</span><span class='line'>    <span class="kd">public</span> <span class="nf">ThreeD</span><span class="o">(</span><span class="n">T</span> <span class="n">t</span><span class="o">,</span> <span class="n">V</span> <span class="n">v</span><span class="o">,</span> <span class="n">W</span> <span class="n">w</span><span class="o">)</span> <span class="o">{</span>
+</span><span class='line'>      <span class="k">this</span><span class="o">.</span><span class="na">t</span> <span class="o">=</span> <span class="n">t</span><span class="o">;</span>
+</span><span class='line'>      <span class="k">this</span><span class="o">.</span><span class="na">v</span> <span class="o">=</span> <span class="n">v</span><span class="o">;</span>
+</span><span class='line'>      <span class="k">this</span><span class="o">.</span><span class="na">w</span> <span class="o">=</span> <span class="n">w</span><span class="o">;</span>
+</span><span class='line'>    <span class="o">}</span>
+</span><span class='line'>  
+</span><span class='line'>    <span class="kd">public</span> <span class="n">T</span> <span class="nf">getA</span><span class="o">()</span> <span class="o">{</span> <span class="k">return</span> <span class="n">t</span><span class="o">;}</span>
+</span><span class='line'>    <span class="kd">public</span> <span class="n">V</span> <span class="nf">getB</span><span class="o">()</span> <span class="o">{</span> <span class="k">return</span> <span class="n">v</span><span class="o">;}</span>
+</span><span class='line'>    <span class="kd">public</span> <span class="n">W</span> <span class="nf">getC</span><span class="o">()</span> <span class="o">{</span> <span class="k">return</span> <span class="n">w</span><span class="o">;}</span>
+</span><span class='line'>  <span class="o">}</span>
+</span><span class='line'>  
+</span><span class='line'>  <span class="kd">interface</span> <span class="nc">IDataList</span><span class="o">&lt;</span><span class="n">T</span><span class="o">,</span> <span class="n">V</span><span class="o">,</span> <span class="n">W</span><span class="o">&gt;</span> <span class="o">{</span>
+</span><span class='line'>    <span class="kd">public</span> <span class="n">T</span> <span class="nf">getA</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">Exception</span><span class="o">;</span>
+</span><span class='line'>    <span class="kd">public</span> <span class="n">V</span> <span class="nf">getB</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">Exception</span><span class="o">;</span>
+</span><span class='line'>    <span class="kd">public</span> <span class="n">W</span> <span class="nf">getC</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">Exception</span><span class="o">;</span>
+</span><span class='line'>    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">size</span><span class="o">();</span>
+</span><span class='line'>  <span class="o">}</span>
+</span><span class='line'>  
+</span><span class='line'>  <span class="kd">abstract</span> <span class="kd">class</span> <span class="nc">DataListProxy</span><span class="o">&lt;</span><span class="n">T</span><span class="o">,</span> <span class="n">V</span><span class="o">,</span> <span class="n">W</span><span class="o">&gt;</span> <span class="kd">implements</span> <span class="n">IDataList</span><span class="o">&lt;</span><span class="n">T</span><span class="o">,</span> <span class="n">V</span><span class="o">,</span> <span class="n">W</span><span class="o">&gt;</span> <span class="o">{</span>
+</span><span class='line'>    <span class="kd">protected</span> <span class="n">IDataList</span><span class="o">&lt;</span><span class="n">T</span><span class="o">,</span> <span class="n">V</span><span class="o">,</span> <span class="n">W</span><span class="o">&gt;</span> <span class="n">real</span><span class="o">;</span>
+</span><span class='line'>    <span class="kd">public</span> <span class="nf">DataListProxy</span><span class="o">(</span><span class="n">IDataList</span><span class="o">&lt;</span><span class="n">T</span><span class="o">,</span> <span class="n">V</span><span class="o">,</span> <span class="n">W</span><span class="o">&gt;</span> <span class="n">real</span><span class="o">)</span> <span class="o">{</span><span class="k">this</span><span class="o">.</span><span class="na">real</span> <span class="o">=</span> <span class="n">real</span><span class="o">;}</span>
+</span><span class='line'>    <span class="kd">public</span> <span class="n">T</span> <span class="nf">getA</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">Exception</span> <span class="o">{</span><span class="k">throw</span> <span class="k">new</span> <span class="n">Exception</span><span class="o">();</span> <span class="o">}</span>
+</span><span class='line'>    <span class="kd">public</span> <span class="n">V</span> <span class="nf">getB</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">Exception</span> <span class="o">{</span><span class="k">throw</span> <span class="k">new</span> <span class="n">Exception</span><span class="o">();</span> <span class="o">}</span>
+</span><span class='line'>    <span class="kd">public</span> <span class="n">W</span> <span class="nf">getC</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">Exception</span> <span class="o">{</span><span class="k">throw</span> <span class="k">new</span> <span class="n">Exception</span><span class="o">();</span> <span class="o">}</span>
+</span><span class='line'>    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">size</span><span class="o">()</span> <span class="o">{</span> <span class="k">return</span> <span class="n">real</span><span class="o">.</span><span class="na">size</span><span class="o">();</span> <span class="o">}</span>
+</span><span class='line'>  <span class="o">}</span>
+</span><span class='line'>  
+</span><span class='line'>  
+</span><span class='line'>  <span class="kd">class</span> <span class="nc">DataListProxyA</span><span class="o">&lt;</span><span class="n">T</span><span class="o">,</span> <span class="n">V</span><span class="o">,</span> <span class="n">W</span><span class="o">&gt;</span> <span class="kd">extends</span> <span class="n">DataListProxy</span><span class="o">&lt;</span><span class="n">T</span><span class="o">,</span> <span class="n">V</span><span class="o">,</span> <span class="n">W</span><span class="o">&gt;</span> <span class="o">{</span>
+</span><span class='line'>    <span class="kd">public</span> <span class="nf">DataListProxyA</span><span class="o">(</span><span class="n">IDataList</span><span class="o">&lt;</span><span class="n">T</span><span class="o">,</span> <span class="n">V</span><span class="o">,</span> <span class="n">W</span><span class="o">&gt;</span> <span class="n">real</span><span class="o">)</span> <span class="o">{</span><span class="kd">super</span><span class="o">(</span><span class="n">real</span><span class="o">);}</span>
+</span><span class='line'>    <span class="kd">public</span> <span class="n">T</span> <span class="nf">getA</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">Exception</span> <span class="o">{</span><span class="k">return</span> <span class="n">real</span><span class="o">.</span><span class="na">getA</span><span class="o">(</span><span class="n">i</span><span class="o">);</span> <span class="o">}</span>
+</span><span class='line'>  <span class="o">}</span>
+</span><span class='line'>  
+</span><span class='line'>  <span class="kd">class</span> <span class="nc">DataListProxyB</span><span class="o">&lt;</span><span class="n">T</span><span class="o">,</span> <span class="n">V</span><span class="o">,</span> <span class="n">W</span><span class="o">&gt;</span> <span class="kd">extends</span> <span class="n">DataListProxy</span><span class="o">&lt;</span><span class="n">T</span><span class="o">,</span> <span class="n">V</span><span class="o">,</span> <span class="n">W</span><span class="o">&gt;</span> <span class="o">{</span>
+</span><span class='line'>    <span class="kd">public</span> <span class="nf">DataListProxyB</span><span class="o">(</span><span class="n">IDataList</span><span class="o">&lt;</span><span class="n">T</span><span class="o">,</span> <span class="n">V</span><span class="o">,</span> <span class="n">W</span><span class="o">&gt;</span> <span class="n">real</span><span class="o">)</span> <span class="o">{</span><span class="kd">super</span><span class="o">(</span><span class="n">real</span><span class="o">);}</span>
+</span><span class='line'>    <span class="kd">public</span> <span class="n">V</span> <span class="nf">getB</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">Exception</span> <span class="o">{</span><span class="k">return</span> <span class="n">real</span><span class="o">.</span><span class="na">getB</span><span class="o">(</span><span class="n">i</span><span class="o">);</span> <span class="o">}</span>
+</span><span class='line'>  <span class="o">}</span>
+</span><span class='line'>  
+</span><span class='line'>  <span class="kd">class</span> <span class="nc">DataListProxyC</span><span class="o">&lt;</span><span class="n">T</span><span class="o">,</span> <span class="n">V</span><span class="o">,</span> <span class="n">W</span><span class="o">&gt;</span> <span class="kd">extends</span> <span class="n">DataListProxy</span><span class="o">&lt;</span><span class="n">T</span><span class="o">,</span> <span class="n">V</span><span class="o">,</span> <span class="n">W</span><span class="o">&gt;</span> <span class="o">{</span>
+</span><span class='line'>    <span class="kd">public</span> <span class="nf">DataListProxyC</span><span class="o">(</span><span class="n">IDataList</span><span class="o">&lt;</span><span class="n">T</span><span class="o">,</span> <span class="n">V</span><span class="o">,</span> <span class="n">W</span><span class="o">&gt;</span> <span class="n">real</span><span class="o">)</span> <span class="o">{</span><span class="kd">super</span><span class="o">(</span><span class="n">real</span><span class="o">);}</span>
+</span><span class='line'>    <span class="kd">public</span> <span class="n">W</span> <span class="nf">getC</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">)</span> <span class="kd">throws</span> <span class="n">Exception</span> <span class="o">{</span><span class="k">return</span> <span class="n">real</span><span class="o">.</span><span class="na">getC</span><span class="o">(</span><span class="n">i</span><span class="o">);</span> <span class="o">}</span>
+</span><span class='line'>  <span class="o">}</span>
+</span><span class='line'>  
+</span><span class='line'>  <span class="kd">class</span> <span class="nc">DataList</span><span class="o">&lt;</span><span class="n">T</span><span class="o">,</span> <span class="n">V</span><span class="o">,</span> <span class="n">W</span><span class="o">&gt;</span> <span class="kd">implements</span> <span class="n">IDataList</span><span class="o">&lt;</span><span class="n">T</span><span class="o">,</span> <span class="n">V</span><span class="o">,</span> <span class="n">W</span><span class="o">&gt;</span> <span class="o">{</span>
+</span><span class='line'>  
+</span><span class='line'>    <span class="kd">private</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">ThreeD</span><span class="o">&lt;</span><span class="n">T</span><span class="o">,</span> <span class="n">V</span><span class="o">,</span> <span class="n">W</span><span class="o">&gt;&gt;</span> <span class="n">list</span> <span class="o">=</span> <span class="k">new</span> <span class="n">ArrayList</span><span class="o">&lt;</span><span class="n">ThreeD</span><span class="o">&lt;</span><span class="n">T</span><span class="o">,</span> <span class="n">V</span><span class="o">,</span> <span class="n">W</span><span class="o">&gt;&gt;();</span>
+</span><span class='line'>  
+</span><span class='line'>    <span class="kd">public</span> <span class="kt">void</span> <span class="nf">add</span><span class="o">(</span><span class="n">ThreeD</span><span class="o">&lt;</span><span class="n">T</span><span class="o">,</span> <span class="n">V</span><span class="o">,</span> <span class="n">W</span><span class="o">&gt;</span> <span class="n">d</span><span class="o">)</span> <span class="o">{</span> <span class="n">list</span><span class="o">.</span><span class="na">add</span><span class="o">(</span><span class="n">d</span><span class="o">);</span> <span class="o">}</span>
+</span><span class='line'>    <span class="kd">public</span> <span class="n">ThreeD</span><span class="o">&lt;</span><span class="n">T</span><span class="o">,</span> <span class="n">V</span><span class="o">,</span> <span class="n">W</span><span class="o">&gt;</span> <span class="n">get</span><span class="o">(</span><span class="kt">int</span> <span class="n">index</span><span class="o">)</span> <span class="o">{</span> <span class="k">return</span> <span class="n">list</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">index</span><span class="o">);</span> <span class="o">}</span>
+</span><span class='line'>    <span class="kd">public</span> <span class="kt">int</span> <span class="nf">size</span><span class="o">()</span> <span class="o">{</span><span class="k">return</span> <span class="n">list</span><span class="o">.</span><span class="na">size</span><span class="o">();}</span>
+</span><span class='line'>    <span class="kd">public</span> <span class="n">T</span> <span class="nf">getA</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">)</span> <span class="o">{</span> <span class="k">return</span> <span class="n">list</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">i</span><span class="o">).</span><span class="na">getA</span><span class="o">();</span> <span class="o">}</span>
+</span><span class='line'>    <span class="kd">public</span> <span class="n">V</span> <span class="nf">getB</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">)</span> <span class="o">{</span> <span class="k">return</span> <span class="n">list</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">i</span><span class="o">).</span><span class="na">getB</span><span class="o">();</span> <span class="o">}</span>
+</span><span class='line'>    <span class="kd">public</span> <span class="n">W</span> <span class="nf">getC</span><span class="o">(</span><span class="kt">int</span> <span class="n">i</span><span class="o">)</span> <span class="o">{</span> <span class="k">return</span> <span class="n">list</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">i</span><span class="o">).</span><span class="na">getC</span><span class="o">();</span> <span class="o">}</span>
+</span><span class='line'>  <span class="o">}</span>
+</span><span class='line'>  
+</span></code></pre></td></tr></table></div></figure>
 
-public class Proxy {
-  public static void main(String[] args) {
-  }
-}
-
-class ThreeD&lt;T, V, W&gt; {
-
-  private T t;
-  private V v;
-  private W w;
-
-  public ThreeD(T t, V v, W w) {
-    this.t = t;
-    this.v = v;
-    this.w = w;
-  }
-
-  public T getA() { return t;}
-  public V getB() { return v;}
-  public W getC() { return w;}
-}
-
-interface IDataList&lt;T, V, W&gt; {
-  public T getA(int i) throws Exception;
-  public V getB(int i) throws Exception;
-  public W getC(int i) throws Exception;
-  public int size();
-}
-
-abstract class DataListProxy&lt;T, V, W&gt; implements IDataList&lt;T, V, W&gt; {
-  protected IDataList&lt;T, V, W&gt; real;
-  public DataListProxy(IDataList&lt;T, V, W&gt; real) {this.real = real;}
-  public T getA(int i) throws Exception {throw new Exception(); }
-  public V getB(int i) throws Exception {throw new Exception(); }
-  public W getC(int i) throws Exception {throw new Exception(); }
-  public int size() { return real.size(); }
-}
-
-
-class DataListProxyA&lt;T, V, W&gt; extends DataListProxy&lt;T, V, W&gt; {
-  public DataListProxyA(IDataList&lt;T, V, W&gt; real) {super(real);}
-  public T getA(int i) throws Exception {return real.getA(i); }
-}
-
-class DataListProxyB&lt;T, V, W&gt; extends DataListProxy&lt;T, V, W&gt; {
-  public DataListProxyB(IDataList&lt;T, V, W&gt; real) {super(real);}
-  public V getB(int i) throws Exception {return real.getB(i); }
-}
-
-class DataListProxyC&lt;T, V, W&gt; extends DataListProxy&lt;T, V, W&gt; {
-  public DataListProxyC(IDataList&lt;T, V, W&gt; real) {super(real);}
-  public W getC(int i) throws Exception {return real.getC(i); }
-}
-
-class DataList&lt;T, V, W&gt; implements IDataList&lt;T, V, W&gt; {
-
-  private ArrayList&lt;ThreeD&lt;T, V, W&gt;&gt; list = new ArrayList&lt;ThreeD&lt;T, V, W&gt;&gt;();
-
-  public void add(ThreeD&lt;T, V, W&gt; d) { list.add(d); }
-  public ThreeD&lt;T, V, W&gt; get(int index) { return list.get(index); }
-  public int size() {return list.size();}
-  public T getA(int i) { return list.get(i).getA(); }
-  public V getB(int i) { return list.get(i).getB(); }
-  public W getC(int i) { return list.get(i).getC(); }
-}
-```
-</code></pre>
 
 <p>Decorator, OCP<br/>
 题目：对如下继承树进行扩展，Border（Plain，3D, Fancy) ScrollBar(Horiz, Vert)</p>
