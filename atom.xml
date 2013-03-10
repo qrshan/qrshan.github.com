@@ -4,7 +4,7 @@
   <title><![CDATA[侠客谷]]></title>
   <link href="http://qrshan.github.com/atom.xml" rel="self"/>
   <link href="http://qrshan.github.com/"/>
-  <updated>2013-03-10T14:46:25+08:00</updated>
+  <updated>2013-03-10T14:50:13+08:00</updated>
   <id>http://qrshan.github.com/</id>
   <author>
     <name><![CDATA[卿荣山]]></name>
@@ -19,8 +19,12 @@
     <updated>2013-03-10T14:20:00+08:00</updated>
     <id>http://qrshan.github.com/blog/2013/03/10/code</id>
     <content type="html"><![CDATA[<p>集合类型PROGRAMMING TO INTERFACE<br/>
-题目：有一个数据列表DataList,其基本类型是3维向量ThreeD&lt;x,y,z>，1）用Java语言实现该数据列表的数据结构。假设有三个外部对象A,B,C,分别对其x、y、 z维度感兴趣,希望访问DataList在相应维 度的数据并进行处理。2)请定义其对外的数据接口。分别使用Iterator与Proxy。（PS：Iterator，Proxy需要自己实现）<br/>
-Iterator:</p>
+题目：有一个数据列表DataList,其基本类型是3维向量ThreeD&lt;x,y,z>，1）用Java语言实现该数据列表的数据结构。假设有三个外部对象A,B,C,分别对其x、y、 z维度感兴趣,希望访问DataList在相应维 度的数据并进行处理。2)请定义其对外的数据接口。分别使用Iterator与Proxy。（PS：Iterator，Proxy需要自己实现）</p>
+
+<!-- more -->
+
+
+<p>Iterator:</p>
 
 <pre><code>import java.util.*;
 
@@ -308,7 +312,7 @@ strategy: 是由 Client 创建，也由 Client 销毁</p>
 <li><p>线形：实线、虚线、双线…</p></li>
 <li>线粗细：1x、2x、4x</li>
 <li>颜色：RGB<br/>
-由于只有图形和线形是可变的类型，因此 Bridge Pattern 的两个继承树图形和线形。</li>
+<del> 由于只有图形和线形是可变的类型，因此 Bridge Pattern 的两个继承树图形和线形。 </del></li>
 </ul>
 
 
@@ -413,7 +417,7 @@ An Example: https://gist.github.com/2978425</p>
 
 <p>如果类的种类（抽象类）的个数是确定的、不会轻易改变(也就是 Product 的种类是相对稳定的)，并且类的依赖呈现 product family，那使用 Abstract Factory</p>
 
-<p><del> That&#8217;s All </del> *<sup>o<sup>*</sup></sup> ~~~</p>
+<p>That&#8217;s All *<sup>o<sup>*</sup></sup> ~~~</p>
 ]]></content>
   </entry>
   
