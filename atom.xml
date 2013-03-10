@@ -4,7 +4,7 @@
   <title><![CDATA[侠客谷]]></title>
   <link href="http://qrshan.github.com/atom.xml" rel="self"/>
   <link href="http://qrshan.github.com/"/>
-  <updated>2013-03-10T15:26:17+08:00</updated>
+  <updated>2013-03-10T15:34:30+08:00</updated>
   <id>http://qrshan.github.com/</id>
   <author>
     <name><![CDATA[卿荣山]]></name>
@@ -26,7 +26,7 @@
 
 <p>Iterator:</p>
 
-<pre><code>``` java zz:体系结构期末复习——设计模式思考题 http://qrshan.github.com/blog/2013/03/10/code/ Source Article
+<pre><code>``` java
 
 import java.util.*;
 
@@ -136,7 +136,7 @@ class DataList&lt;T, V, W&gt; implements Aggregate&lt;T, V, W&gt; {
 
 <p>Proxy:</p>
 
-<pre><code>``` java zz:体系结构期末复习——设计模式思考题 http://qrshan.github.com/blog/2013/03/10/code/ Source Article      
+<pre><code>``` java       
 import java.util.*;
 
 public class Proxy {
