@@ -9,8 +9,7 @@
   <meta name="author" content="卿荣山">
 
   
-  <meta name="description" content="集合类型PROGRAMMING TO INTERFACE
-题目：有一个数据列表DataList,其基本类型是3维向量ThreeD&lt;x,y,z>，1）用Java语言实现该数据列表的数据结构。假设有三个外部对象A,B,C,分别对其x、y、 z维度感兴趣,希望访问DataList在相应维 &hellip;">
+  <meta name="description" content="集合类型programming to interface 题目：有一个数据列表DataList,其基本类型是3维向量ThreeD&lt;x,y,z>，1）用Java语言实现该数据列表的数据结构。假设有三个外部对象A,B,C,分别对其x、y、 z维度感兴趣,希望访问DataList在相应维 &hellip;">
   
 
   <!-- http://t.co/dKP3o1e -->
@@ -93,7 +92,7 @@
   </header>
 
 
-<div class="entry-content"><p>集合类型PROGRAMMING TO INTERFACE<br/>
+<div class="entry-content"><p><strong><em>集合类型programming to interface</em></strong>  <br/>
 题目：有一个数据列表DataList,其基本类型是3维向量ThreeD&lt;x,y,z>，1）用Java语言实现该数据列表的数据结构。假设有三个外部对象A,B,C,分别对其x、y、 z维度感兴趣,希望访问DataList在相应维 度的数据并进行处理。2)请定义其对外的数据接口。分别使用Iterator与Proxy。（PS：Iterator，Proxy需要自己实现）</p>
 
 <!-- more -->
@@ -237,9 +236,9 @@
 </span><span class='line'>    <span class="kd">private</span> <span class="n">W</span> <span class="n">w</span><span class="o">;</span>
 </span><span class='line'>  
 </span><span class='line'>    <span class="kd">public</span> <span class="nf">ThreeD</span><span class="o">(</span><span class="n">T</span> <span class="n">t</span><span class="o">,</span> <span class="n">V</span> <span class="n">v</span><span class="o">,</span> <span class="n">W</span> <span class="n">w</span><span class="o">)</span> <span class="o">{</span>
-</span><span class='line'>  <span class="k">this</span><span class="o">.</span><span class="na">t</span> <span class="o">=</span> <span class="n">t</span><span class="o">;</span>
-</span><span class='line'>  <span class="k">this</span><span class="o">.</span><span class="na">v</span> <span class="o">=</span> <span class="n">v</span><span class="o">;</span>
-</span><span class='line'>  <span class="k">this</span><span class="o">.</span><span class="na">w</span> <span class="o">=</span> <span class="n">w</span><span class="o">;</span>
+</span><span class='line'>      <span class="k">this</span><span class="o">.</span><span class="na">t</span> <span class="o">=</span> <span class="n">t</span><span class="o">;</span>
+</span><span class='line'>      <span class="k">this</span><span class="o">.</span><span class="na">v</span> <span class="o">=</span> <span class="n">v</span><span class="o">;</span>
+</span><span class='line'>      <span class="k">this</span><span class="o">.</span><span class="na">w</span> <span class="o">=</span> <span class="n">w</span><span class="o">;</span>
 </span><span class='line'>    <span class="o">}</span>
 </span><span class='line'>  
 </span><span class='line'>    <span class="kd">public</span> <span class="n">T</span> <span class="nf">getA</span><span class="o">()</span> <span class="o">{</span> <span class="k">return</span> <span class="n">t</span><span class="o">;}</span>
@@ -264,8 +263,8 @@
 </span><span class='line'>    <span class="kd">protected</span> <span class="n">DataList</span> <span class="n">ag</span><span class="o">;</span>
 </span><span class='line'>    <span class="kd">protected</span> <span class="kt">int</span> <span class="n">i</span><span class="o">;</span>
 </span><span class='line'>    <span class="kd">public</span> <span class="nf">IteratorABC</span><span class="o">(</span><span class="n">DataList</span> <span class="n">ag</span><span class="o">)</span> <span class="o">{</span>
-</span><span class='line'>  <span class="k">this</span><span class="o">.</span><span class="na">ag</span> <span class="o">=</span> <span class="n">ag</span><span class="o">;</span>
-</span><span class='line'>  <span class="n">i</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="o">;</span>
+</span><span class='line'>      <span class="k">this</span><span class="o">.</span><span class="na">ag</span> <span class="o">=</span> <span class="n">ag</span><span class="o">;</span>
+</span><span class='line'>      <span class="n">i</span> <span class="o">=</span> <span class="o">-</span><span class="mi">1</span><span class="o">;</span>
 </span><span class='line'>    <span class="o">}</span>
 </span><span class='line'>    <span class="kd">public</span> <span class="n">T</span> <span class="nf">first</span><span class="o">()</span> <span class="o">{</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span><span class="o">;</span> <span class="k">return</span> <span class="n">currentItem</span><span class="o">();}</span>
 </span><span class='line'>    <span class="kd">public</span> <span class="n">T</span> <span class="nf">next</span><span class="o">()</span> <span class="o">{</span><span class="n">i</span> <span class="o">+=</span> <span class="mi">1</span><span class="o">;</span> <span class="k">return</span> <span class="n">currentItem</span><span class="o">();}</span>
@@ -276,21 +275,21 @@
 </span><span class='line'>  
 </span><span class='line'>  <span class="kd">class</span> <span class="nc">IteratorA</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="kd">extends</span> <span class="n">IteratorABC</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;{</span>
 </span><span class='line'>    <span class="kd">public</span> <span class="nf">IteratorA</span><span class="o">(</span><span class="n">DataList</span> <span class="n">ag</span><span class="o">)</span> <span class="o">{</span>
-</span><span class='line'>  <span class="kd">super</span><span class="o">(</span><span class="n">ag</span><span class="o">);</span>
+</span><span class='line'>      <span class="kd">super</span><span class="o">(</span><span class="n">ag</span><span class="o">);</span>
 </span><span class='line'>    <span class="o">}</span>
 </span><span class='line'>    <span class="kd">public</span> <span class="n">T</span> <span class="nf">currentItem</span><span class="o">()</span> <span class="o">{</span> <span class="k">if</span> <span class="o">(</span><span class="n">isDone</span><span class="o">())</span> <span class="k">return</span> <span class="kc">null</span><span class="o">;</span> <span class="k">return</span> <span class="o">(</span><span class="n">T</span><span class="o">)</span><span class="n">ag</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">i</span><span class="o">).</span><span class="na">getA</span><span class="o">();}</span>
 </span><span class='line'>  <span class="o">}</span>
 </span><span class='line'>  
 </span><span class='line'>  <span class="kd">class</span> <span class="nc">IteratorB</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="kd">extends</span> <span class="n">IteratorABC</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;{</span>
 </span><span class='line'>    <span class="kd">public</span> <span class="nf">IteratorB</span><span class="o">(</span><span class="n">DataList</span> <span class="n">ag</span><span class="o">)</span> <span class="o">{</span>
-</span><span class='line'>  <span class="kd">super</span><span class="o">(</span><span class="n">ag</span><span class="o">);</span>
+</span><span class='line'>      <span class="kd">super</span><span class="o">(</span><span class="n">ag</span><span class="o">);</span>
 </span><span class='line'>    <span class="o">}</span>
 </span><span class='line'>    <span class="kd">public</span> <span class="n">T</span> <span class="nf">currentItem</span><span class="o">()</span> <span class="o">{</span> <span class="k">if</span> <span class="o">(</span><span class="n">isDone</span><span class="o">())</span> <span class="k">return</span> <span class="kc">null</span><span class="o">;</span> <span class="k">return</span> <span class="o">(</span><span class="n">T</span><span class="o">)</span><span class="n">ag</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">i</span><span class="o">).</span><span class="na">getB</span><span class="o">();}</span>
 </span><span class='line'>  <span class="o">}</span>
 </span><span class='line'>  
 </span><span class='line'>  <span class="kd">class</span> <span class="nc">IteratorC</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;</span> <span class="kd">extends</span> <span class="n">IteratorABC</span><span class="o">&lt;</span><span class="n">T</span><span class="o">&gt;{</span>
 </span><span class='line'>    <span class="kd">public</span> <span class="nf">IteratorC</span><span class="o">(</span><span class="n">DataList</span> <span class="n">ag</span><span class="o">)</span> <span class="o">{</span>
-</span><span class='line'>  <span class="kd">super</span><span class="o">(</span><span class="n">ag</span><span class="o">);</span>
+</span><span class='line'>      <span class="kd">super</span><span class="o">(</span><span class="n">ag</span><span class="o">);</span>
 </span><span class='line'>    <span class="o">}</span>
 </span><span class='line'>    <span class="kd">public</span> <span class="n">T</span> <span class="nf">currentItem</span><span class="o">()</span> <span class="o">{</span> <span class="k">if</span> <span class="o">(</span><span class="n">isDone</span><span class="o">())</span> <span class="k">return</span> <span class="kc">null</span><span class="o">;</span> <span class="k">return</span> <span class="o">(</span><span class="n">T</span><span class="o">)</span><span class="n">ag</span><span class="o">.</span><span class="na">get</span><span class="o">(</span><span class="n">i</span><span class="o">).</span><span class="na">getC</span><span class="o">();}</span>
 </span><span class='line'>  <span class="o">}</span>
