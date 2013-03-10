@@ -101,7 +101,8 @@
 
 <p>Iterator:</p>
 
-<pre><code>import java.util.*;
+<pre><code>''' java  
+import java.util.*;
 
 public class Iter {
     public static void main(String[] args) {
@@ -204,11 +205,13 @@ class DataList&lt;T, V, W&gt; implements Aggregate&lt;T, V, W&gt; {
   public Iterator&lt;V&gt; createIteratorB() { return ib; }  
   public Iterator&lt;W&gt; createIteratorC() { return ic; }  
 }
+'''
 </code></pre>
 
 <p>Proxy:</p>
 
-<pre><code>import java.util.*;
+<pre><code>''' java  
+import java.util.*;
 
 public class Proxy {
   public static void main(String[] args) {
@@ -275,6 +278,7 @@ class DataList&lt;T, V, W&gt; implements IDataList&lt;T, V, W&gt; {
   public V getB(int i) { return list.get(i).getB(); }
   public W getC(int i) { return list.get(i).getC(); }
 }
+'''
 </code></pre>
 
 <p>Decorator, OCP<br/>
