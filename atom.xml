@@ -4,7 +4,7 @@
   <title><![CDATA[侠客谷]]></title>
   <link href="http://qrshan.github.com/atom.xml" rel="self"/>
   <link href="http://qrshan.github.com/"/>
-  <updated>2013-03-21T22:32:44+08:00</updated>
+  <updated>2013-03-21T22:49:40+08:00</updated>
   <id>http://qrshan.github.com/</id>
   <author>
     <name><![CDATA[卿荣山]]></name>
@@ -19,7 +19,7 @@
     <updated>2013-03-10T14:20:00+08:00</updated>
     <id>http://qrshan.github.com/blog/2013/03/10/design-pattern</id>
     <content type="html"><![CDATA[<p><strong><em>集合类型programming to interface</em></strong>  <br/>
-题目：有一个数据列表DataList,其基本类型是3维向量ThreeD&lt;x,y,z>，1）用Java语言实现该数据列表的数据结构。假设有三个外部对象A,B,C,分别对其x、y、 z维度感兴趣,希望访问DataList在相应维 度的数据并进行处理。2)请定义其对外的数据接口。分别使用Iterator与Proxy。（PS：Iterator，Proxy需要自己实现）</p>
+1.题目：有一个数据列表DataList,其基本类型是3维向量ThreeD&lt;x,y,z>，1）用Java语言实现该数据列表的数据结构。假设有三个外部对象A,B,C,分别对其x、y、 z维度感兴趣,希望访问DataList在相应维 度的数据并进行处理。2)请定义其对外的数据接口。分别使用Iterator与Proxy。（PS：Iterator，Proxy需要自己实现）</p>
 
 <!-- more -->
 
@@ -382,7 +382,7 @@
 </span></code></pre></td></tr></table></div></figure>
 
 
-<p>Decorator, OCP<br/>
+<p>2.Decorator, OCP<br/>
 题目：对如下继承树进行扩展，Border（Plain，3D, Fancy) ScrollBar(Horiz, Vert)</p>
 
 <figure class='code'> <div class="highlight"><table><tr><td class="gutter"><pre class="line-numbers"><span class='line-number'>1</span>
@@ -456,7 +456,7 @@
 
 
 <p>Information Hiding &amp; Common and Variation<br/>
-题目：比较 facade 与 controller 的异同</p>
+3.题目：比较 facade 与 controller 的异同</p>
 
 <p>相同：</p>
 
@@ -467,10 +467,11 @@
 不同：</p></li>
 <li><p>facade 主要关注的是模块之间的解耦和信息隐藏，为一个子系统提供一个简单的，外在的接口，任意两个之间，只要有一些解耦的需求，都可以用 facade 。而 controller 的目的是对应用户需求，职责分配，主要处理当来了一个请求或什么的，具体要分配给那个对象取。</p></li>
 <li><p>（yy）facade由于是为了模块的解耦，在两个基本的类之间做一个 facade 是没有意义的。而 controller 目的是为了让用户的请求和处理之间彼此独立，所以可以存在两个类之间有一个controller。</p></li>
-<li><p>Façade是个比较奇怪的模式，它没有Solution Structure，因为它只是一种思想，一种对局部复杂结构进行包装和简化，以达到信息隐藏的一种想法而已。<br/>
-题目：在策略模式中, 为什么使用“聚合”而不是 “关联”关系?</p></li>
+<li><p>Façade是个比较奇怪的模式，它没有Solution Structure，因为它只是一种思想，一种对局部复杂结构进行包装和简化，以达到信息隐藏的一种想法而已。</p></li>
 </ul>
 
+
+<p>4.题目：在策略模式中, 为什么使用“聚合”而不是 “关联”关系?</p>
 
 <p>聚合可以说是一种比较强的关联，聚合指出在对象 A 中需要有 B 的应用，而关联仅仅是一种使用关系。由于关联没有规定 A 中有B的引用，那么如果 策略模式使用关联来实现，那么就无法解决综合使用多个策略的问题，它要么使用一个策略，要么策略的个数是确定的。</p>
 
@@ -478,13 +479,13 @@
 
 <p>Common and Variation</p>
 
-<p>问题：如果一个对象集之间除共性外,有超过2个的差异行为,如何处理?<br/>
+<p>5.问题：如果一个对象集之间除共性外,有超过2个的差异行为,如何处理?<br/>
 两棵策略树</p>
 
 <p>问题：如果一个对象集的部分行为组存在差异性,如何处理?<br/>
 把行为组放在策略中</p>
 
-<p>问题：问题：如果一个对象集的部分属性(以及依赖于这些属性的方法)存在差异性,如何处理?  <br/>
+<p>问题：如果一个对象集的部分属性(以及依赖于这些属性的方法)存在差异性,如何处理?  <br/>
 把这些属性和方法放在策略中</p>
 
 <p>问题：如果一个对象集的一个行为需要协作对象来完成,但是它们的协作对象存在差异性,如何处理?<br/>
@@ -493,7 +494,7 @@
 <p>问题：如果一个对象集的行为因为属性的取值而存在差异性,如何处理?<br/>
 state pattern</p>
 
-<p>Compare strategy and state</p>
+<p><strong>Compare strategy and state</strong></p>
 
 <p>from stackoverflow</p>
 
@@ -501,20 +502,20 @@ state pattern</p>
 
 <p>The State pattern is about doing different things based on the state, while leaving the caller releaved from the burden of accommodating every possible state. So for example you might have a getStatus() method that will return different statuses based on the state of the object, but the caller of the method doesn’t have to be coded differently to account for each potential state.</p>
 
-<p>“1 of N” or “M of N”?</p>
+<p><strong>“1 of N” or “M of N”?</strong></p>
 
 <p>strategy M of N, state 通常是 1 of N ，但是在并发的情况下是 M of N</p>
 
-<p>Who control the change of variation?</p>
+<p><strong>Who control the change of variation?</strong></p>
 
 <p>That is the difference between “Context decide changing of ConcreteState object” and “ConcreteState desice changing of Concrete State” 有什么不同<br/>
 State 是由自己控制变化的，而 strategy 通常是由 context 控制变化的。State 自己控制变化的过程是隐式的，外部不知道现在的状态和下一个状态将要是什么，而由 context 控制变化的时候，是能够控制变化的。通常 Strategy 都是完成的同一个功能，State 不一定。</p>
 
-<p>How to change? Fixed rules of configuration files</p>
+<p><strong>How to change? Fixed rules of configuration files</strong></p>
 
 <p>都可以，但是个人认为 state 通常是 fixed rules，strategy 通常是 configuration files</p>
 
-<p>Crating and destroying policy?</p>
+<p><strong>Crating and destroying policy?</strong></p>
 
 <p>state: 除了第一个之外，都是由 state 自己创建，并且是由 state 自己销毁的。<br/>
 strategy: 是由 Client 创建，也由 Client 销毁</p>
