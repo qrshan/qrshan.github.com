@@ -1,6 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
+    <loc>http://www.qingrongshan.com.cn/blog/2014/12/16/hadoop-setup/</loc>
+    <lastmod>2014-12-16T20:14:00+08:00</lastmod>
+    <priority>0.8</priority>
+  </url>
+  <url>
     <loc>http://www.qingrongshan.com.cn/blog/2013/04/11/travle-west/</loc>
     <lastmod>2013-04-11T00:22:00+08:00</lastmod>
     <priority>0.8</priority>
@@ -42,31 +47,31 @@
   </url>
   <url>
     <loc>http://www.qingrongshan.com.cn/archives/</loc>
-    <lastmod>2014-12-16T19:59:53+08:00</lastmod>
+    <lastmod>2014-12-16T20:05:45+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>http://www.qingrongshan.com.cn/blog/archives/</loc>
-    <lastmod>2014-12-16T19:59:53+08:00</lastmod>
+    <lastmod>2014-12-16T20:05:45+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>http://www.qingrongshan.com.cn/</loc>
-    <lastmod>2014-12-16T19:59:53+08:00</lastmod>
+    <lastmod>2014-12-16T20:05:45+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>1.0</priority>
   </url>
   <url>
     <loc>http://www.qingrongshan.com.cn/categories/</loc>
-    <lastmod>2014-12-16T19:59:53+08:00</lastmod>
+    <lastmod>2014-12-16T20:05:45+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>
   <url>
     <loc>http://www.qingrongshan.com.cn/about/</loc>
-    <lastmod>2014-12-16T19:59:53+08:00</lastmod>
+    <lastmod>2014-12-16T20:05:45+08:00</lastmod>
     <changefreq>weekly</changefreq>
     <priority>0.7</priority>
   </url>

@@ -4,7 +4,7 @@
   <title><![CDATA[Category: Octopress | 侠客谷]]></title>
   <link href="http://www.qingrongshan.com.cn/blog/categories/octopress/atom.xml" rel="self"/>
   <link href="http://www.qingrongshan.com.cn/"/>
-  <updated>2014-12-16T19:59:53+08:00</updated>
+  <updated>2014-12-16T20:05:45+08:00</updated>
   <id>http://www.qingrongshan.com.cn/</id>
   <author>
     <name><![CDATA[卿荣山]]></name>
@@ -12,6 +12,15 @@
   </author>
   <generator uri="http://octopress.org/">Octopress</generator>
 
+  
+  <entry>
+    <title type="html"><![CDATA[Hadoop相关]]></title>
+    <link href="http://www.qingrongshan.com.cn/blog/2014/12/16/hadoop-setup/"/>
+    <updated>2014-12-16T20:14:00+08:00</updated>
+    <id>http://www.qingrongshan.com.cn/blog/2014/12/16/hadoop-setup</id>
+    <content type="html"><![CDATA[<p>我会在这里了记录一些hadoop相关的内容</p>
+]]></content>
+  </entry>
   
   <entry>
     <title type="html"><![CDATA[Octopress工作环境迁移测试]]></title>
