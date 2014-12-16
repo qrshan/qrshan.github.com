@@ -4,7 +4,7 @@
   <title><![CDATA[侠客谷]]></title>
   <link href="http://www.qingrongshan.com.cn/atom.xml" rel="self"/>
   <link href="http://www.qingrongshan.com.cn/"/>
-  <updated>2014-12-16T21:12:30+08:00</updated>
+  <updated>2014-12-16T21:41:05+08:00</updated>
   <id>http://www.qingrongshan.com.cn/</id>
   <author>
     <name><![CDATA[卿荣山]]></name>
@@ -14,7 +14,7 @@
 
   
   <entry>
-    <title type="html"><![CDATA[Hadoop相关]]></title>
+    <title type="html"><![CDATA[hadoop相关]]></title>
     <link href="http://www.qingrongshan.com.cn/blog/2014/12/16/hadoop-setup/"/>
     <updated>2014-12-16T20:14:00+08:00</updated>
     <id>http://www.qingrongshan.com.cn/blog/2014/12/16/hadoop-setup</id>
@@ -61,7 +61,7 @@
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Zz:体系结构期末复习——设计模式思考题]]></title>
+    <title type="html"><![CDATA[zz:体系结构期末复习——设计模式思考题]]></title>
     <link href="http://www.qingrongshan.com.cn/blog/2013/03/10/design-pattern/"/>
     <updated>2013-03-10T14:20:00+08:00</updated>
     <id>http://www.qingrongshan.com.cn/blog/2013/03/10/design-pattern</id>
@@ -979,7 +979,7 @@ An Example: https://gist.github.com/2978425</p>
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Octopress工作环境迁移测试]]></title>
+    <title type="html"><![CDATA[octopress工作环境迁移测试]]></title>
     <link href="http://www.qingrongshan.com.cn/blog/2013/03/03/test111/"/>
     <updated>2013-03-03T22:04:00+08:00</updated>
     <id>http://www.qingrongshan.com.cn/blog/2013/03/03/test111</id>
@@ -1015,7 +1015,7 @@ UCLA空切，初始采用2-3落位。1持球过半场，佯装寻找4，随后�
   </entry>
   
   <entry>
-    <title type="html"><![CDATA[Octopress 初体验]]></title>
+    <title type="html"><![CDATA[octopress 初体验]]></title>
     <link href="http://www.qingrongshan.com.cn/blog/2013/02/02/octopress-hello-world/"/>
     <updated>2013-02-02T12:14:00+08:00</updated>
     <id>http://www.qingrongshan.com.cn/blog/2013/02/02/octopress-hello-world</id>
